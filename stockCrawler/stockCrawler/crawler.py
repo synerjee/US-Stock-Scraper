@@ -17,7 +17,6 @@ class StockSpider(scrapy.Spider):
 
 
     def parse(self, response):
-        # Extracts top performing stock data from Yahoo
         url = response.url
         print('Crawling: < {} >'.format(url))
 
