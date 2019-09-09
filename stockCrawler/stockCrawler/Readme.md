@@ -1,0 +1,1 @@
+US Stock Crawler crawls three websites (Yahoo Finance, TradingView, and Dogs of the Dow) and stores the collected data in CSV format. This Python crawler was created using Scrapy framework. It collects data on top performing stocks of the day, including their names, price, and rate of change.
