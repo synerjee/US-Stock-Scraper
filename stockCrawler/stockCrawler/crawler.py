@@ -40,7 +40,7 @@ class StockSpider(scrapy.Spider):
 
         yahoo_param = [0, 1, 2, 3, 4, 5, 6, 7, 8]
         trad_param = [4, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-        dow_param = [1, 2, 3, 4, 5, 6, 7]
+        dow_param = [0, 1, 2, 3, 4, 5, 6]
         param = [0]
         params = [yahoo_param, trad_param, dow_param]
 
@@ -55,8 +55,7 @@ class StockSpider(scrapy.Spider):
         csvExists = path.exists(fileName)
         file = open(fileName, 'w+', encoding='UTF-8')
         csvFile = csv.writer(file)
-        if (not csvExists):
-            csvFile.writerow(setup)
+        csvFile.writerow(setup)
 
         j = 1
         next = True
