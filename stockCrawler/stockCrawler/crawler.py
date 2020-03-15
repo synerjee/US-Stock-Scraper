@@ -1,6 +1,5 @@
 import scrapy
 import csv
-from os import path
 
 class StockSpider(scrapy.Spider):
     name='stock'
@@ -52,7 +51,6 @@ class StockSpider(scrapy.Spider):
                 param = params[i]
                 i += len(mainNames)
 
-        csvExists = path.exists(fileName)
         file = open(fileName, 'w+', encoding='UTF-8')
         csvFile = csv.writer(file)
         csvFile.writerow(setup)
